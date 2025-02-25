@@ -15,17 +15,20 @@ Our analysis revealed a remarkably strong relationship between TV advertising an
    - **Impact Quantification**: Each $1M invested yields $3.56M in sales
    - **Statistical Significance**: Extremely high confidence (p < 0.001)
    - **Strategic Insight**: Clear evidence supporting TV as primary channel
+   - **Category Impact**: Further multiple regression analysis shows High TV campaigns outperform Medium by $75.6M and Low by $154.6M
 
 2. **Channel Comparison**: 📈
    - **TV**: Strongest sales predictor with clear linear relationship
-   - **Radio**: Moderate positive correlation with sales
+   - **Radio**: Moderate positive correlation with sales ($2.97M in additional sales per $1M spent)
    - **Social Media**: Weaker association with overall sales
+   - **Influencer Categories**: Minimal impact across Mega, Macro, Micro, and Nano categories
    - **Resource Focus**: Prioritize TV while testing complementary channel strategies
 
 3. **Model Validation**: ✅
    - Linearity assumption confirmed 
    - Normality of residuals verified
    - Homoscedasticity requirements satisfied
+   - Multiple regression model explains 90.4% of sales variance
    - **Reliability**: Statistical foundation for decision-making
 
 ---
@@ -45,17 +48,32 @@ Initial data exploration revealed a relatively balanced sales distribution rangi
 
 The pairplot visualization clearly shows that TV has the strongest linear relationship with Sales compared to Radio and Social Media. This initial finding guided our selection of TV as the primary independent variable for our regression model.
 
-### Model Development
+### Simple Regression Model
 ![TV Budget vs Sales](linearity.png)
 
 The scatterplot confirms an exceptionally strong linear relationship between TV Budget and Sales. The tight clustering of points along a virtually perfect line demonstrates the predictive power of TV advertising expenditure.
 
+### Multiple Regression Analysis
+
+To extend our analysis, we also performed a multiple linear regression incorporating:
+- TV promotional budget categories (Low, Medium, High)
+- Social Media budget (in millions)
+- Radio budget (in millions)
+- Influencer categories (Mega, Macro, Micro, Nano)
+
+Key findings from this expanded analysis:
+- TV category remains the strongest predictor when controlling for all other variables
+- Radio shows consistent significant positive impact ($2.97M per $1M spent)
+- Social Media shows minimal independent effect when controlling for other channels
+- Full model explains 90.4% of sales variance (R-squared: 0.904)
+
 ### Model Validation
 ![Residuals Analysis](histogram-of-residuals.png)
 
-Statistical testing confirms the validity of our model:
+Statistical testing confirms the validity of our models:
 - The histogram and Q-Q plot show that residuals follow an approximately normal distribution
 - The predicted vs. actual values show minimal deviation
+- Multicollinearity testing shows acceptable VIF values below 2
 
 ![Homoscedasticity Check](residuals-vs-fitted-values.png)
 
@@ -67,15 +85,17 @@ The consistent band of points across all fitted values indicates that the error 
 
 The insights revealed through this analysis suggest several powerful strategic approaches:
 
-1. **Investment Prioritization**: The data provides clear evidence for prioritizing TV advertising in the marketing mix
+1. **Investment Prioritization**: The data provides clear evidence for prioritizing TV advertising in the marketing mix, specifically favoring High category TV campaigns
 
 2. **ROI Forecasting**: With every $1M in TV advertising corresponding to $3.56M in sales, organizations can accurately project returns on marketing investments
 
-3. **Testing Framework**: A structured approach to testing TV advertising strategies can further refine understanding of performance drivers
+3. **Channel Mix Optimization**: The multiple regression results suggest focusing primarily on TV and Radio, with careful evaluation of Social Media strategies
 
-4. **Market Monitoring**: Regular analysis of the TV advertising-sales relationship can identify shifts in effectiveness over time
+4. **Testing Framework**: A structured approach to testing TV advertising strategies can further refine understanding of performance drivers
 
-5. **Channel Integration**: Exploring synergies between TV and other marketing channels might reveal multiplicative effects
+5. **Market Monitoring**: Regular analysis of the TV advertising-sales relationship can identify shifts in effectiveness over time
+
+6. **Channel Integration**: Exploring synergies between TV and other marketing channels might reveal multiplicative effects
 
 ---
 
@@ -87,7 +107,7 @@ This project follows a rigorous analytical approach:
 
 2. **Data Exploration**: Examining distributions and relationships in marketing campaign data
 
-3. **Statistical Modeling**: Using simple linear regression to quantify precise relationships
+3. **Statistical Modeling**: Using both simple and multiple linear regression to quantify precise relationships
 
 4. **Assumption Verification**: Testing for linearity, independence, normality, and homoscedasticity 
 
@@ -95,14 +115,17 @@ This project follows a rigorous analytical approach:
 
 6. **Insight Generation**: Converting statistical findings into actionable business strategies
 
+7. **Comparative Analysis**: Reconciling findings from both simple and multiple regression approaches
+
 ---
 
 ## Technical Resources 📁
 
 - **Analysis Tools**: Python, Pandas, Matplotlib, Seaborn, Statsmodels
-- **Statistical Methods**: Linear Regression, Assumption Testing, Hypothesis Testing
+- **Statistical Methods**: Simple and Multiple Linear Regression, Assumption Testing, Hypothesis Testing
 - **Key Files**: 
   - [Marketing Budget Analysis Notebook](https://github.com/mslawsky/marketing-budget-impact-analysis/blob/main/Marketing_Budget_Analysis.ipynb)
+  - [Multiple Regression Analysis](https://github.com/mslawsky/marketing-budget-impact-analysis/blob/main/Multiple_Regression_Analysis.py)
   - [Marketing Campaign Dataset](https://github.com/mslawsky/marketing-budget-impact-analysis/blob/main/marketing_and_sales_data_evaluate_lr.csv)
 
 ---
@@ -115,6 +138,7 @@ This project illustrates how statistical analysis reveals patterns that transfor
 - **Precision**: Quantifying exact relationships between marketing and revenue 
 - **Evidence**: Building strategy on empirical foundations
 - **Optimization**: Allocating resources for maximum impact
+- **Nuance**: Understanding both direct and adjusted impacts of marketing channels
 
 While this analysis focuses on marketing budget allocation, the data-driven approach demonstrated here applies across virtually every business domain.
 
