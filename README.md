@@ -125,6 +125,7 @@ While this analysis focuses on marketing budget allocation, the data-driven appr
 For inquiries about this analysis:
 - [LinkedIn Profile](https://www.linkedin.com/in/melissaslawsky/)
 - [Client Results](https://melissaslawsky.com/portfolio/)
+- [Tableau Portfolio](https://public.tableau.com/app/profile/melissa.slawsky1925/vizzes)
 - [Email](mailto:melissa@melissaslawsky.com)
 
 ---
