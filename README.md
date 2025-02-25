@@ -3,7 +3,7 @@
 **Marketing Channel Optimization Analysis**  
 This project demonstrates how data-driven analysis can identify which marketing channels deliver the strongest sales impact, providing evidence-based guidance for budget allocation decisions.
 
-![Analysis Overview](sales_distribution.png)
+![Analysis Overview](distribution-of-sales.png)
 
 ---
 
@@ -32,7 +32,7 @@ Our analysis revealed a remarkably strong relationship between TV advertising an
 
 ## Data Exploration: Understanding Sales Patterns 📊
 
-![Sales Distribution](sales_distribution.png)
+![Sales Distribution](distribution-of-sales.png)
 
 Initial data exploration revealed a relatively balanced sales distribution ranging from approximately 50 to 375 million dollars, with no strong skew in either direction. This well-structured data provided an excellent foundation for regression analysis.
 
@@ -41,23 +41,23 @@ Initial data exploration revealed a relatively balanced sales distribution rangi
 ## Statistical Analysis: Marketing Channel Impact Assessment 📈
 
 ### Relationship Identification
-![Pairwise Relationships](pairwise_relationships.png)
+![Pairwise Relationships](pairwise-relationships.png)
 
 The pairplot visualization clearly shows that TV has the strongest linear relationship with Sales compared to Radio and Social Media. This initial finding guided our selection of TV as the primary independent variable for our regression model.
 
 ### Model Development
-![TV Budget vs Sales](tv_sales_relationship.png)
+![TV Budget vs Sales](linearity.png)
 
 The scatterplot confirms an exceptionally strong linear relationship between TV Budget and Sales. The tight clustering of points along a virtually perfect line demonstrates the predictive power of TV advertising expenditure.
 
 ### Model Validation
-![Residuals Analysis](residuals_analysis.png)
+![Residuals Analysis](histogram-of-residuals.png)
 
 Statistical testing confirms the validity of our model:
 - The histogram and Q-Q plot show that residuals follow an approximately normal distribution
 - The predicted vs. actual values show minimal deviation
 
-![Homoscedasticity Check](residuals_vs_fitted.png)
+![Homoscedasticity Check](residuals-vs-fitted-values.png)
 
 The consistent band of points across all fitted values indicates that the error variance is stable, satisfying the homoscedasticity assumption required for reliable linear regression.
 
