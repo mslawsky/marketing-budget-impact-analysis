@@ -33,11 +33,38 @@ Our analysis revealed a remarkably strong relationship between TV advertising an
 
 ---
 
+## New Insights: Hypothesis Testing & Group Comparisons 🔧
+
+### ANOVA-Based Hypothesis Testing
+
+Building on the regression analysis, we performed a one-way ANOVA test to determine if significant differences exist in sales among categorical groups for TV promotion budgets and influencer sizes.
+
+#### Key Findings from ANOVA:
+
+1. **TV Promotion Budgets**: Significant differences in mean sales across Low, Medium, and High budget categories (F-statistic: 1971.46, p < 0.001):
+   - High budgets outperform Medium by approximately $101.5M.
+   - Medium budgets outperform Low by approximately $107.3M.
+   - High budgets outperform Low by approximately $208.8M.
+
+2. **Influencer Sizes**: Variation in sales across influencer categories was less pronounced but still evident. Further exploration required.
+
+#### Post Hoc Testing (Tukey's HSD):
+Pairwise comparisons confirm statistically significant differences between all TV budget categories. Each step up in budget level yields substantial sales gains:
+   - High > Medium > Low with consistent statistical significance.
+
+#### Model Assumptions:
+   - **Normality**: Residuals showed deviations from normality, suggesting caution in small sample sizes.
+   - **Homoscedasticity**: Residual variance increased slightly with fitted values, a common issue with categorical predictors.
+
+![ANOVA Results](anova-summary.png)
+
+---
+
 ## Data Exploration: Understanding Sales Patterns 📊
 
 ![Sales Distribution](distribution-of-sales.png)
 
-Initial data exploration revealed a relatively balanced sales distribution ranging from approximately 50 to 375 million dollars, with no strong skew in either direction. This well-structured data provided an excellent foundation for regression analysis.
+Initial data exploration revealed a relatively balanced sales distribution ranging from approximately 50 to 375 million dollars, with no strong skew in either direction. This well-structured data provided an excellent foundation for regression and ANOVA analysis.
 
 ---
 
@@ -89,7 +116,7 @@ The insights revealed through this analysis suggest several powerful strategic a
 
 2. **ROI Forecasting**: With every $1M in TV advertising corresponding to $3.56M in sales, organizations can accurately project returns on marketing investments
 
-3. **Channel Mix Optimization**: The multiple regression results suggest focusing primarily on TV and Radio, with careful evaluation of Social Media strategies
+3. **Channel Mix Optimization**: The multiple regression and ANOVA results suggest focusing primarily on TV and Radio, with careful evaluation of Social Media strategies
 
 4. **Testing Framework**: A structured approach to testing TV advertising strategies can further refine understanding of performance drivers
 
@@ -104,28 +131,24 @@ The insights revealed through this analysis suggest several powerful strategic a
 This project follows a rigorous analytical approach:
 
 1. **Problem Definition**: Identifying which marketing channels most effectively drive sales growth
-
 2. **Data Exploration**: Examining distributions and relationships in marketing campaign data
-
 3. **Statistical Modeling**: Using both simple and multiple linear regression to quantify precise relationships
-
-4. **Assumption Verification**: Testing for linearity, independence, normality, and homoscedasticity 
-
-5. **Performance Measurement**: Evaluating model accuracy using R-squared, p-values, and confidence intervals
-
-6. **Insight Generation**: Converting statistical findings into actionable business strategies
-
-7. **Comparative Analysis**: Reconciling findings from both simple and multiple regression approaches
+4. **ANOVA Testing**: Assessing group-level differences using one-way ANOVA and post hoc comparisons
+5. **Assumption Verification**: Testing for linearity, independence, normality, and homoscedasticity 
+6. **Performance Measurement**: Evaluating model accuracy using R-squared, p-values, and confidence intervals
+7. **Insight Generation**: Converting statistical findings into actionable business strategies
+8. **Comparative Analysis**: Reconciling findings from both regression and ANOVA approaches
 
 ---
 
 ## Technical Resources 📁
 
 - **Analysis Tools**: Python, Pandas, Matplotlib, Seaborn, Statsmodels
-- **Statistical Methods**: Simple and Multiple Linear Regression, Assumption Testing, Hypothesis Testing
+- **Statistical Methods**: Simple and Multiple Linear Regression, ANOVA Testing, Tukey's HSD, Assumption Testing
 - **Key Files**: 
   - [Marketing Budget Analysis Notebook](https://github.com/mslawsky/marketing-budget-impact-analysis/blob/main/Marketing_Budget_Analysis.ipynb)
   - [Multiple Regression Analysis](https://github.com/mslawsky/marketing-budget-impact-analysis/blob/main/Multiple_Regression_Analysis.py)
+  - [ANOVA Analysis](https://github.com/mslawsky/marketing-budget-impact-analysis/blob/main/ANOVA_Analysis.py)
   - [Marketing Campaign Dataset](https://github.com/mslawsky/marketing-budget-impact-analysis/blob/main/marketing_and_sales_data_evaluate_lr.csv)
 
 ---
@@ -155,3 +178,4 @@ For inquiries about this analysis:
 ---
 
 © Melissa Slawsky 2025. All Rights Reserved.
+
